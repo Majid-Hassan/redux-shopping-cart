@@ -7,12 +7,6 @@ const Header = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const navLinks = [
-        { name: "Home", href: "/" },
-        { name: "Services", href: "#" },
-        { name: "Cart", href: "../../pages/Cart" }
-    ];
-
 
     return (
         <div>
@@ -55,15 +49,24 @@ const Header = () => {
                 {/* Mobile menu */}
                 <div className={`md:hidden transition-all duration-300 ease-in-out ${isOpen ? "opacity-100 h-screen" : "opacity-0 h-0 invisible"}`}>
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900 shadow-lg">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
+                       <Link
+                            to={'/'}
+                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            to={'/'}
+                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                        >
+                            Services
+                        </Link>
+                        <Link
+                            to={'/cart'}
+                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                        >
+                            Cart
+                        </Link>
                     </div>
                 </div>
             </header>
