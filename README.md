@@ -30,9 +30,15 @@ To get started with this project, follow these steps:
    git clone https://github.com/yourusername/react-redux-shopping-cart.git  
    cd react-redux-shopping-cart
 
-npm install     
+2. Install the dependencies:
+   ```bash
+   
+   npm install   
 
-npm run dev
+3. Start the development server:
+   ```bash  
+
+   npm run dev
 
 ## Usage
 
